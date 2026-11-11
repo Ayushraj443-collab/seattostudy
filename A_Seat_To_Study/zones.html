@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Zones | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="zones">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>Library Study Zones</h1>
+          <p>Separate quiet individual areas and interactive group spaces to match how you study best.</p>
+        </div>
+        <a href="availability.html" class="btn btn-primary">View All Availability</a>
+      </div>
+
+      <!-- Two Dedicated Zone Cards -->
+      <section class="section">
+        <div class="grid-2">
+          <!-- Silent Zone Card -->
+          <article class="card zone-card zone-card--silent">
+            <div class="card-header">
+              <div>
+                <h2 class="card-title" style="font-size:1.35rem;">Silent Zone</h2>
+                <p class="card-subtitle">Dedicated to quiet focus and uninterrupted study</p>
+              </div>
+              <span class="badge badge-blue">Quiet Environment</span>
+            </div>
+
+            <p style="color:#475569;">
+              The Silent Zone is designed for students who require complete concentration without ambient conversation or distractions.
+            </p>
+
+            <ul>
+              <li><strong>Suitable for individual study:</strong> Individual desks with personal power outlets and reading lamps.</li>
+              <li><strong>Quiet environment:</strong> Maintained silence throughout the floor to minimize noise fatigue.</li>
+              <li><strong>No group discussions:</strong> Voice calls, meetings, and group discussions are strictly prohibited.</li>
+              <li><strong>Suitable for exam preparation:</strong> Ideal for semester finals, competitive exams, and thesis reading.</li>
+            </ul>
+
+            <h3 style="font-size:1rem; margin:1.1rem 0 0.65rem;">Spaces in Silent Zone</h3>
+            <div id="silent-zone-spaces"></div>
+          </article>
+
+          <!-- Collaborative Zone Card -->
+          <article class="card zone-card zone-card--collab">
+            <div class="card-header">
+              <div>
+                <h2 class="card-title" style="font-size:1.35rem;">Collaborative Zone</h2>
+                <p class="card-subtitle">Built for teamwork, discussion, and shared projects</p>
+              </div>
+              <span class="badge badge-green">Discussion Friendly</span>
+            </div>
+
+            <p style="color:#475569;">
+              The Collaborative Zone brings classmates together in open seating and dedicated rooms without disturbing quiet readers.
+            </p>
+
+            <ul>
+              <li><strong>Suitable for group study:</strong> Shared multi-seat tables and round team clusters.</li>
+              <li><strong>Group discussions allowed:</strong> Speak naturally with teammates during active study sessions.</li>
+              <li><strong>Team learning:</strong> Encourages peer mentoring, concept explanations, and study circles.</li>
+              <li><strong>Collaborative assignments:</strong> Great for mini-projects, lab reports, and presentation practice.</li>
+            </ul>
+
+            <h3 style="font-size:1rem; margin:1.1rem 0 0.65rem;">Spaces in Collaborative Zone</h3>
+            <div id="collab-zone-spaces"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Zone Guidelines Comparison -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Quick Zone Comparison Guide</h2>
+        </div>
+        <div class="card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Silent Zone</th>
+                  <th>Collaborative Zone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Noise Level</strong></td>
+                  <td>Pin-drop silence</td>
+                  <td>Moderate conversational volume</td>
+                </tr>
+                <tr>
+                  <td><strong>Best For</strong></td>
+                  <td>Individual reading &amp; exam preparation</td>
+                  <td>Group discussions &amp; team assignments</td>
+                </tr>
+                <tr>
+                  <td><strong>Phone / Video Calls</strong></td>
+                  <td>Not permitted (use silent mode)</td>
+                  <td>Allowed with earphones or low volume</td>
+                </tr>
+                <tr>
+                  <td><strong>Included Library Spaces</strong></td>
+                  <td>Library Floor 1, Silent Reading Room</td>
+                  <td>Library Floor 2, Group Discussion Room</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

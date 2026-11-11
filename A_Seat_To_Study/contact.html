@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="contact">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>Contact Us</h1>
+          <p>Have a question about study spaces, seat reservations, or library access? Send us a message.</p>
+        </div>
+        <a href="feedback.html" class="btn btn-secondary">Leave Study Space Feedback</a>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 1.25fr 0.9fr; align-items:start;">
+        <!-- Contact Form -->
+        <section class="card">
+          <h2 style="font-size:1.25rem; margin-bottom:1rem;">Send a Message</h2>
+
+          <div id="contact-alert" class="alert hidden" role="alert"></div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="student@college.edu" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" class="form-control" placeholder="Write your question or inquiry here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit Message</button>
+          </form>
+        </section>
+
+        <!-- Library Desk Information -->
+        <aside>
+          <div class="card" style="margin-bottom:1.25rem;">
+            <h2 style="font-size:1.2rem; margin-bottom:0.75rem;">College Library Helpdesk (Sample Info)</h2>
+            <ul class="detail-list" style="margin-bottom:0;">
+              <li><span>Location</span><strong>Central Academic Library, Ground Floor</strong></li>
+              <li><span>Support Email</span><strong>library.helpdesk@college.edu</strong></li>
+              <li><span>Library Hours</span><strong>Mon - Sat, 08:00 AM - 08:00 PM</strong></li>
+              <li><span>Group Room Hours</span><strong>Mon - Sat, 09:00 AM - 07:00 PM</strong></li>
+            </ul>
+          </div>
+
+          <div class="card" style="background:#eff6ff; border-color:#bfdbfe;">
+            <h3 class="card-title">Want to Rate a Study Space?</h3>
+            <p style="font-size:0.9rem; color:#475569; margin:0.4rem 0 0.85rem;">
+              Share a 1-to-5 star rating and review for Library Floor 1, Library Floor 2, Silent Reading Room, or Group Discussion Room.
+            </p>
+            <a href="feedback.html" class="btn btn-primary btn-sm">Open Feedback Form</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

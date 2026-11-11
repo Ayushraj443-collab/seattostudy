@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Sign Up | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="signup">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="auth-wrapper">
+        <div class="card">
+          <div style="text-align:center; margin-bottom:1.25rem;">
+            <h1 style="font-size:1.65rem;">Create Student Account</h1>
+            <p style="color:#475569; margin-bottom:0;">Register to check seat maps and reserve library study spaces.</p>
+          </div>
+
+          <div id="signup-already-logged-in" class="alert alert-info hidden"></div>
+          <div id="signup-alert" class="alert hidden" role="alert"></div>
+
+          <form id="signup-form" novalidate>
+            <div class="form-group">
+              <label for="signup-name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="signup-name"
+                class="form-control"
+                placeholder="e.g., Riya Verma"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="signup-email"
+                class="form-control"
+                placeholder="e.g., riya.verma@college.edu"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="signup-password"
+                class="form-control"
+                placeholder="Minimum 6 characters"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-confirm" class="form-label">Confirm Password</label>
+              <input
+                type="password"
+                id="signup-confirm"
+                class="form-control"
+                placeholder="Re-enter your password"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.25rem;">
+              Create Account
+            </button>
+          </form>
+
+          <p style="text-align:center; margin-top:1rem; margin-bottom:0; font-size:0.92rem;">
+            Already have a student account? <a href="login.html"><strong>Login here</strong></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

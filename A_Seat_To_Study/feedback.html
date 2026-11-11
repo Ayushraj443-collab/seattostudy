@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Feedback | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="feedback">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>Study Space Feedback</h1>
+          <p>Rate your study space experience and share suggestions to help improve campus library seating.</p>
+        </div>
+        <a href="contact.html" class="btn btn-secondary">Contact Helpdesk</a>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 1fr 1.15fr; align-items:start;">
+        <!-- Feedback Form -->
+        <section class="card">
+          <h2 style="font-size:1.25rem; margin-bottom:1rem;">Submit Your Feedback</h2>
+
+          <div id="feedback-alert" class="alert hidden" role="alert"></div>
+
+          <form id="feedback-form" novalidate>
+            <div class="form-group">
+              <label for="fb-name" class="form-label">Student Name</label>
+              <input type="text" id="fb-name" class="form-control" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="fb-email" class="form-label">Email Address</label>
+              <input type="email" id="fb-email" class="form-control" placeholder="student@college.edu" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fb-space" class="form-label">Study Space</label>
+                <select id="fb-space" class="form-control" required></select>
+              </div>
+
+              <div class="form-group">
+                <label for="fb-rating" class="form-label">Rating (1 to 5)</label>
+                <select id="fb-rating" class="form-control" required>
+                  <option value="5">5 - Excellent</option>
+                  <option value="4">4 - Very Good</option>
+                  <option value="3">3 - Good</option>
+                  <option value="2">2 - Fair</option>
+                  <option value="1">1 - Needs Improvement</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fb-message" class="form-label">Feedback Message</label>
+              <textarea id="fb-message" class="form-control" placeholder="Share your experience about seating comfort, quietness, power outlets, or booking ease..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit Feedback</button>
+          </form>
+        </section>
+
+        <!-- Recent Feedback Entries -->
+        <section>
+          <div class="section-header" style="margin-bottom:0.85rem;">
+            <h2>Student Feedback Entries</h2>
+          </div>
+          <p style="font-size:0.85rem; color:#64748b; margin-bottom:1rem;">
+            Includes illustrative sample feedback entries for demonstration alongside any feedback you submit in this browser.
+          </p>
+          <div id="feedback-list"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

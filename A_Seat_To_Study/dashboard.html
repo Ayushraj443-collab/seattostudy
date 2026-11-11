@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <!-- Welcome Header -->
+      <div class="page-header">
+        <div>
+          <h1 id="dashboard-welcome">Welcome back!</h1>
+          <p>Live library study space summary calculated automatically from current availability data.</p>
+        </div>
+        <div style="display:flex; gap:0.65rem; flex-wrap:wrap;">
+          <a href="booking.html" class="btn btn-primary">Quick Booking</a>
+          <a href="seat-selection.html" class="btn btn-secondary">Open Seat Map</a>
+        </div>
+      </div>
+
+      <!-- 4 Automatic Dashboard Stat Cards -->
+      <section class="section">
+        <div class="grid-4">
+          <div class="stat-card stat-card--navy">
+            <div>
+              <div class="stat-label">Total Study Spaces</div>
+              <div class="stat-value" id="dash-total-spaces">0</div>
+            </div>
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div>
+              <div class="stat-label">Total Seats</div>
+              <div class="stat-value" id="dash-total-seats">0</div>
+            </div>
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+              </svg>
+            </div>
+          </div>
+
+          <div class="stat-card stat-card--green">
+            <div>
+              <div class="stat-label">Available Seats</div>
+              <div class="stat-value" id="dash-available-seats" style="color:#15803d;">0</div>
+            </div>
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="stat-card stat-card--red">
+            <div>
+              <div class="stat-label">Occupied Seats</div>
+              <div class="stat-value" id="dash-occupied-seats" style="color:#b91c1c;">0</div>
+            </div>
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Availability Summary -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Study Space Availability Summary</h2>
+          <a href="availability.html" class="btn btn-sm btn-secondary">View All Details</a>
+        </div>
+        <div class="card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Study Space</th>
+                  <th>Floor</th>
+                  <th>Study Zone</th>
+                  <th>Available / Total</th>
+                  <th>Occupancy</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="dash-availability-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recently Booked Seats & Study Zone Info -->
+      <section class="section">
+        <div class="grid-2" style="grid-template-columns: 1.45fr 1fr;">
+          <div>
+            <div class="section-header">
+              <h2>Recently Booked Seats</h2>
+              <a href="my-bookings.html" class="btn btn-sm btn-secondary">My Bookings</a>
+            </div>
+            <div class="card">
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Study Space</th>
+                      <th>Seat</th>
+                      <th>Date</th>
+                      <th>Time Slot</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dash-recent-bookings-body"></tbody>
+                </table>
+              </div>
+              <p style="font-size:0.82rem; color:#64748b; margin-top:0.75rem; margin-bottom:0;">
+                * Initial entries represent illustrative sample library bookings stored in LocalStorage.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-header">
+              <h2>Study Zone Information</h2>
+              <a href="zones.html" class="btn btn-sm btn-secondary">Compare Zones</a>
+            </div>
+            <div class="card zone-card zone-card--silent" style="margin-bottom:1rem;">
+              <div class="card-header">
+                <h3 class="card-title">Silent Zone</h3>
+                <span class="badge badge-blue">Individual Study</span>
+              </div>
+              <p id="dash-silent-summary" style="font-size:0.9rem; color:#475569;"></p>
+              <p style="font-size:0.86rem; color:#475569; margin-bottom:0.85rem;">
+                Quiet environment strictly reserved for individual study and exam preparation.
+              </p>
+              <a href="zones.html" class="btn btn-sm btn-secondary">Explore Silent Zone</a>
+            </div>
+
+            <div class="card zone-card zone-card--collab">
+              <div class="card-header">
+                <h3 class="card-title">Collaborative Zone</h3>
+                <span class="badge badge-green">Group Study</span>
+              </div>
+              <p id="dash-collab-summary" style="font-size:0.9rem; color:#475569;"></p>
+              <p style="font-size:0.86rem; color:#475569; margin-bottom:0.85rem;">
+                Open group seating supporting discussions, teamwork, and collaborative assignments.
+              </p>
+              <a href="zones.html" class="btn btn-sm btn-secondary">Explore Collaborative Zone</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
