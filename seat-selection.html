@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select a Seat | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="seat-selection">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>Interactive Seat Selection</h1>
+          <p>Choose a study space, date, and time slot, then click any green seat to reserve it.</p>
+        </div>
+        <a href="availability.html" class="btn btn-secondary">All Study Spaces</a>
+      </div>
+
+      <!-- Controls Bar -->
+      <section class="card section" style="margin-bottom:1.5rem;">
+        <div class="grid-3">
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="seat-space-select" class="form-label">Study Space</label>
+            <select id="seat-space-select" class="form-control"></select>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="seat-date-input" class="form-label">Booking Date</label>
+            <input type="date" id="seat-date-input" class="form-control" />
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="seat-slot-select" class="form-label">Time Slot</label>
+            <select id="seat-slot-select" class="form-control"></select>
+          </div>
+        </div>
+      </section>
+
+      <div id="seat-alert" class="alert hidden" role="alert"></div>
+
+      <!-- Seat Grid + Selected Seat Info Panel -->
+      <div class="seat-layout-grid">
+        <section class="card">
+          <div style="margin-bottom:0.85rem;">
+            <p id="seat-map-counts" style="margin-bottom:0.65rem; color:#0f294a;"></p>
+            <div class="seat-legend">
+              <span class="legend-item"><span class="legend-swatch swatch-available"></span> Available</span>
+              <span class="legend-item"><span class="legend-swatch swatch-occupied"></span> Occupied</span>
+              <span class="legend-item"><span class="legend-swatch swatch-selected"></span> Selected Seat</span>
+            </div>
+          </div>
+
+          <div id="seat-grid" class="seat-grid" aria-label="Interactive Seat Map"></div>
+        </section>
+
+        <aside class="card selected-seat-panel">
+          <h2 style="font-size:1.25rem; margin-bottom:0.75rem;">Selected Seat Details</h2>
+
+          <div id="no-seat-selected" class="alert alert-info" style="margin-bottom:0;">
+            Click any <strong>green available seat</strong> on the map to inspect its details and confirm your booking.
+          </div>
+
+          <div id="selected-seat-details" class="hidden">
+            <ul class="detail-list">
+              <li><span>Seat Number</span><strong id="sel-seat-id" style="font-size:1.1rem; color:#1d4ed8;">-</strong></li>
+              <li><span>Study Space</span><strong id="sel-space-name">-</strong></li>
+              <li><span>Floor</span><strong id="sel-space-floor">-</strong></li>
+              <li><span>Study Zone</span><strong id="sel-space-zone">-</strong></li>
+              <li><span>Booking Date</span><strong id="sel-date">-</strong></li>
+              <li><span>Time Slot</span><strong id="sel-slot">-</strong></li>
+              <li><span>Student Name</span><strong id="sel-student">-</strong></li>
+            </ul>
+
+            <button type="button" id="confirm-seat-btn" class="btn btn-primary" style="width:100%; margin-bottom:0.6rem;">
+              Confirm Booking
+            </button>
+            <a id="open-full-booking-link" href="booking.html" class="btn btn-secondary" style="width:100%;">
+              Customize in Booking Form
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Space Availability | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="availability">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>Study Space Availability</h1>
+          <p>Compare available seats, occupancy percentages, and study zones across all four college library spaces.</p>
+        </div>
+        <a href="booking.html" class="btn btn-primary">Book a Seat</a>
+      </div>
+
+      <!-- Zone Filter Controls -->
+      <div class="filter-bar" role="group" aria-label="Filter by Study Zone">
+        <button type="button" class="filter-btn active" data-zone-filter="all">All Study Spaces</button>
+        <button type="button" class="filter-btn" data-zone-filter="Silent Zone">Silent Zone</button>
+        <button type="button" class="filter-btn" data-zone-filter="Collaborative Zone">Collaborative Zone</button>
+      </div>
+
+      <!-- Study Space Cards -->
+      <section class="section">
+        <div id="availability-cards" class="grid-2"></div>
+      </section>
+
+      <!-- Structured Summary Table -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Seat Capacity &amp; Occupancy Overview</h2>
+        </div>
+        <div class="card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Study Space</th>
+                  <th>Floor</th>
+                  <th>Zone</th>
+                  <th>Total Seats</th>
+                  <th>Available</th>
+                  <th>Occupied</th>
+                  <th>Occupancy %</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="availability-table-body"></tbody>
+            </table>
+          </div>
+          <p style="font-size:0.82rem; color:#64748b; margin-top:0.85rem; margin-bottom:0;">
+            * Sample dataset loaded from <code>data.js</code> and dynamically updated in real time as seats are booked or cancelled.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

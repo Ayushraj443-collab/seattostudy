@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Login | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="login">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="auth-wrapper">
+        <div class="card">
+          <div style="text-align:center; margin-bottom:1.25rem;">
+            <h1 style="font-size:1.65rem;">Student Login</h1>
+            <p style="color:#475569; margin-bottom:0;">Sign in to access your dashboard, seat map, and bookings.</p>
+          </div>
+
+          <div id="already-logged-in" class="alert alert-info hidden"></div>
+          <div id="login-alert" class="alert hidden" role="alert"></div>
+
+          <form id="login-form" novalidate>
+            <div class="form-group">
+              <label for="login-email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="login-email"
+                class="form-control"
+                placeholder="student@college.edu"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="login-password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="login-password"
+                class="form-control"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.25rem;">
+              Login
+            </button>
+          </form>
+
+          <p style="text-align:center; margin-top:1rem; margin-bottom:0; font-size:0.92rem;">
+            New student here? <a href="signup.html"><strong>Create an Account (Sign Up)</strong></a>
+          </p>
+
+          <div class="demo-box">
+            <p><strong>Demo Student Account (For Quick Demonstration):</strong></p>
+            <p>Email: <code>aarav.sharma@college.edu</code><br />Password: <code>student123</code></p>
+            <button type="button" id="fill-demo-btn" class="btn btn-sm btn-secondary">
+              Fill Demo Credentials
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

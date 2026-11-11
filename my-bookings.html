@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bookings | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="my-bookings">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>My Bookings</h1>
+          <p id="my-bookings-subtitle">Manage your confirmed study seat reservations or cancel a booking to release the seat.</p>
+        </div>
+        <div style="display:flex; gap:0.65rem; flex-wrap:wrap;">
+          <a href="seat-selection.html" class="btn btn-secondary">Select Seat</a>
+          <a href="booking.html" class="btn btn-primary">New Booking</a>
+        </div>
+      </div>
+
+      <div id="my-bookings-alert" class="alert hidden" role="alert"></div>
+
+      <section id="my-bookings-container"></section>
+
+      <p style="font-size:0.84rem; color:#64748b; margin-top:1rem;">
+        Note: Cancelling a confirmed booking immediately frees that seat on the Seat Map and updates Study Space Availability.
+      </p>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

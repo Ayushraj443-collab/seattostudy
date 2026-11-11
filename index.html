@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Seat to Study | Discovering and Sharing Study Spaces</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content main-content--flush-top">
+    <!-- Hero Welcome Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-eyebrow">College Library Study Space Finder</span>
+            <h1>A Seat to Study</h1>
+            <p class="hero-subtitle">
+              Discovering and sharing study spaces across your college library. Check live seat availability, explore silent or collaborative zones, and reserve your ideal study seat in seconds.
+            </p>
+            <div id="home-auth-actions" class="hero-actions">
+              <a href="availability.html" class="btn btn-white btn-lg">Find a Seat</a>
+              <a href="login.html" class="btn btn-outline-light btn-lg">Login</a>
+              <a href="signup.html" class="btn btn-outline-light btn-lg">Sign Up</a>
+            </div>
+          </div>
+
+          <div class="hero-summary-card">
+            <h3>Live Library Snapshot (Sample Dataset)</h3>
+            <div class="hero-mini-stats">
+              <div class="hero-mini-stat">
+                <span class="num" id="home-stat-spaces">4</span>
+                <span class="lbl">Study Spaces</span>
+              </div>
+              <div class="hero-mini-stat">
+                <span class="num" id="home-stat-total">260</span>
+                <span class="lbl">Total Seats</span>
+              </div>
+              <div class="hero-mini-stat">
+                <span class="num" id="home-stat-available" style="color:#15803d;">92</span>
+                <span class="lbl">Available Seats</span>
+              </div>
+              <div class="hero-mini-stat">
+                <span class="num" id="home-stat-occupied" style="color:#b91c1c;">168</span>
+                <span class="lbl">Occupied Seats</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Introduction & Problem Statement -->
+      <section class="section">
+        <div class="grid-2">
+          <div class="card">
+            <h2 style="font-size:1.35rem; margin-bottom:0.65rem;">Welcome to A Seat to Study</h2>
+            <p>
+              <strong>A Seat to Study</strong> is a student-focused web platform designed to make locating, checking, and reserving study seats inside the college library effortless. Instead of walking from floor to floor with heavy backpacks, students can verify open seating before arriving.
+            </p>
+            <p style="margin-bottom:0;">
+              Whether you need a quiet corner for exam preparation or a discussion table for a group project, the platform organizes every library floor and room clearly.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 style="font-size:1.35rem; margin-bottom:0.65rem;">Problem Statement</h2>
+            <div class="problem-box">
+              <p style="margin-bottom:0;">
+                "Students often face difficulty finding suitable study spaces during busy academic periods. Some students prefer silent individual study, while others need collaborative spaces for group discussions. A Seat to Study aims to make finding suitable study spaces easier and more convenient."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits of the Platform -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Key Benefits for Students</h2>
+          <a href="about.html" class="btn btn-sm btn-secondary">Read About Project</a>
+        </div>
+        <div class="grid-4">
+          <article class="card">
+            <div class="stat-icon" style="margin-bottom:0.85rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Instant Availability Check</h3>
+            <p style="font-size:0.9rem; color:#475569; margin-top:0.4rem; margin-bottom:0;">
+              View exact seat counts and occupancy percentages for every library floor before you arrive.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="stat-icon" style="margin-bottom:0.85rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Clear Study Zones</h3>
+            <p style="font-size:0.9rem; color:#475569; margin-top:0.4rem; margin-bottom:0;">
+              Separate Silent Zones for solo study and Collaborative Zones for team discussions.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="stat-icon" style="margin-bottom:0.85rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Simple Seat Booking</h3>
+            <p style="font-size:0.9rem; color:#475569; margin-top:0.4rem; margin-bottom:0;">
+              Pick individual seat numbers on an intuitive green-and-red map with conflict protection.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="stat-icon" style="margin-bottom:0.85rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">Save Time During Exams</h3>
+            <p style="font-size:0.9rem; color:#475569; margin-top:0.4rem; margin-bottom:0;">
+              Avoid overcrowding during peak exam weeks and manage or cancel bookings easily.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Quick Navigation Section -->
+      <section class="section">
+        <div class="card" style="background-color:#eff6ff; border-color:#bfdbfe; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h2 style="font-size:1.25rem; margin-bottom:0.25rem;">Ready to Reserve Your Library Seat?</h2>
+            <p style="margin-bottom:0; color:#475569;">
+              Check real-time availability across 4 study spaces or sign in to access your Student Dashboard.
+            </p>
+          </div>
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a href="availability.html" class="btn btn-primary">Explore Study Spaces</a>
+            <a href="zones.html" class="btn btn-secondary">View Study Zones</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

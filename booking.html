@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Study Seat | A Seat to Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="booking">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>Book a Study Seat</h1>
+          <p>Reserve an available seat for your chosen date and time slot with automatic overlap protection.</p>
+        </div>
+        <a href="my-bookings.html" class="btn btn-secondary">View My Bookings</a>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 1.35fr 0.9fr; align-items:start;">
+        <!-- Booking Form Card -->
+        <section class="card">
+          <h2 style="font-size:1.25rem; margin-bottom:1rem;">Seat Reservation Form</h2>
+
+          <div id="booking-alert" class="alert hidden" role="alert"></div>
+
+          <form id="booking-form" novalidate>
+            <div class="form-group">
+              <label for="booking-student" class="form-label">Student Name</label>
+              <input type="text" id="booking-student" class="form-control" readonly />
+            </div>
+
+            <div class="form-group">
+              <label for="booking-space" class="form-label">Study Space</label>
+              <select id="booking-space" class="form-control" required></select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="booking-date" class="form-label">Booking Date</label>
+                <input type="date" id="booking-date" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label for="booking-slot" class="form-label">Time Slot</label>
+                <select id="booking-slot" class="form-control" required></select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="booking-seat" class="form-label">Select Seat Number</label>
+              <select id="booking-seat" class="form-control" required></select>
+              <small style="color:#64748b; display:block; margin-top:0.35rem;">
+                Note: Trying to reserve an occupied seat or overlapping time slot will be blocked automatically.
+              </small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+              Confirm Booking
+            </button>
+          </form>
+
+          <!-- Confirmation Card -->
+          <div id="booking-confirmation-card" class="card hidden" style="margin-top:1.25rem; background:#f0fdf4; border-color:#86efac;"></div>
+        </section>
+
+        <!-- Space Live Summary Sidebar -->
+        <aside id="booking-space-summary" class="card"></aside>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
